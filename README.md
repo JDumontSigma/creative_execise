@@ -9,4 +9,4 @@ This is the page which holds the rationale part of my assignment along with the 
 
 ###Animated Canvas Drawing
 This is the page which holds the developed version of my static canvas, now including animation
-[Undergoing work]((https://jdumontsigma.github.io/creative_exercise/Exercise%201/dist/animated.html "Static Canvas Work"))
+[Undergoing work](https://jdumontsigma.github.io/creative_exercise/Exercise%201/dist/animated.html "Static Canvas Work")
