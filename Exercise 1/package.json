@@ -1,0 +1,30 @@
+{
+  "name": "canvas-building",
+  "version": "0.0.0",
+  "description": "Designing and building canvas images both static and animated",
+  "license": "",
+  "repository":{
+      "type" : "git",
+      "url"  : ""
+    },
+  "dependencies": {
+  	"gulp": "*",
+  	"gulp-autoprefixer": "*",
+    "gulp-jshint": "*",
+    "jshint-stylish": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-util": "*",
+    "gulp-uglify": "*",
+    "gulp-concat": "*",
+    "browser-sync": "*",
+    "jquery": "*"
+    ,"gulp-swig": "*"
+    ,"bootstrap-sass": "*"
+  },
+  "devDependencies": {
+    "del": "*"
+  },
+  "jshintConfig": {
+    "node": true
+  }
+}
