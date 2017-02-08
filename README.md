@@ -1,2 +1,8 @@
-# creative_execise
-Uploads for university work based on my assignment, up to 4 assignments may be uploaded here ranging from canvas to ajax request
+# Creative Programming
+## 4 Exercises
+
+
+###Exercise 1
+#### Static Canvas Drawing
+This is the page which holds the rationale part of my assignment along with the static canvas image which I created.
+(https://jdumontsigma.github.io/creative_exercise/Exercise%201/dist/index.html "Static Canvas Work")
