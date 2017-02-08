@@ -10051,7 +10051,7 @@ html {
 body {
   font-size: 14px;
   font-size: 1.4rem;
-  background-color: #E5E5E5;
+  background-color: #ccc;
   height: 100%;
 }
 
@@ -10141,18 +10141,21 @@ a.skip:active, a.skip:focus {
 /* Components */
 /* =========================================================================== */
 #canvas {
-  border: solid 1px black;
   margin: 0 auto;
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   right: 0;
   margin: auto;
 }
 
+.holder {
+  background-color: #E5E5E5;
+  margin-top: 740px;
+}
+
 .rationale {
-  padding-top: 740px;
   padding-bottom: 50px;
 }
 .rationale h1, .rationale h2 {
