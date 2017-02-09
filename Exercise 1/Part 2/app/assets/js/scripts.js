@@ -52,7 +52,7 @@ function cloud(startX,startY){
 /*======================================================================================
 Tree Code Here
 ======================================================================================*/
-function tree(startX,startY){
+function tree(startX,startY,highlight){
 
   var left = startX - 20,
       height = startY + 30,
@@ -122,7 +122,7 @@ function tree(startX,startY){
   ctx.lineTo(startX - 10, startY + 30);
   ctx.lineTo(startX - 20, startY + 30);
   ctx.lineTo(startX,startY);
-  ctx.fillStyle = 'rgba(255,93,0,0.35)';
+  ctx.fillStyle = highlight;
   ctx.fill();
   ctx.closePath();
 
@@ -146,9 +146,9 @@ function hill(startX,startY,bumpX,bumpY,finishX,finishY,color){
 /*======================================================================================
 Sun Code Here
 ======================================================================================*/
-function sun(x,y,size){
+function sun(x,y,size,color){
   ctx.beginPath();
-  ctx.fillStyle = '#FDB813';
+  ctx.fillStyle = color;
   ctx.strokeStyle = 'transparent';
   ctx.arc(x,y,size,0,2*Math.PI);
   ctx.fill();
@@ -156,7 +156,16 @@ function sun(x,y,size){
 }
 
 
-
+function background(height, dark,light){
+  /*======================================================================================
+  Gradient for the background
+  ======================================================================================*/
+  var my_gradient = ctx.createLinearGradient(0, height, 0, 0);
+  my_gradient.addColorStop(0, dark);
+  my_gradient.addColorStop(1, light);
+  ctx.fillStyle = my_gradient;
+  ctx.fillRect(0, 0, 1000, 700);
+}
 
 
 /*======================================================================================
@@ -165,25 +174,85 @@ Draw function
 var cloudNumber = 4,
     cloudData = {},
     activeClouds = 0;
+
+var sunStart = 700,
+    night = false,
+    size = 350,
+    sunColour = '#FDB813';
+
+var red = '#cc0e0e',
+    orange = '#ef9228',
+    blue = '#003087',
+    darkBlue = '#041c2c',
+    shade = true;
+
+var backgroundHeight = 500,
+    darkCol = orange,
+    lightCol = darkBlue;
+
+var blueHighlight = 'rgba(0,48,135,0.35)',
+    orangeHighlight = 'rgba(255,93,0,0.35)' ,
+    highlight = orangeHighlight;
+
+
 function draw(){
 
   //clear the entire canvase
   ctx.save();
   ctx.clearRect(0,0,1000,700);
 
-  /*======================================================================================
-  Gradient for the background
-  ======================================================================================*/
-  var my_gradient = ctx.createLinearGradient(0, 500, 0, 0);
-  my_gradient.addColorStop(0, "#cc0e0e");
-  my_gradient.addColorStop(1, "#ef9228");
-  ctx.fillStyle = my_gradient;
-  ctx.fillRect(0, 0, 1000, 700);
+
+  background(backgroundHeight,darkCol,lightCol);
+
 
   /*======================================================================================
   Sun Is called first so it stays at the back
   ======================================================================================*/
-  sun(500,700,350);
+  if(background < 0){
+    backgroundHeight = 700;
+  }
+    if(night){
+      highlight = blueHighlight;
+      darkCol = darkBlue;
+      if(sunStart > -200){
+        sunStart--;
+        if(backgroundHeight >= 0){
+          backgroundHeight = backgroundHeight - 4;
+        }
+        if(backgroundHeight < 0){
+          lightCol = darkBlue;
+          darkCol = orange;
+        }
+      }
+      if(sunStart <= -200){
+        sunColour = '#FDB813';
+        size = 350;
+        sunStart = 800;
+        night = false;
+        backgroundHeight = 1200;
+      }
+    }
+    if(!night){
+      highlight = orangeHighlight;
+      darkCol = orange;
+      sunStart = sunStart - 2;
+      backgroundHeight = backgroundHeight - 4;
+      if(size > 50){
+        size = size - 0.85;
+      }
+      if(backgroundHeight < 0){
+        lightCol = orange;
+        darkCol = darkBlue;
+      }
+      if(sunStart < -200){
+        night = true;
+        sunStart = 600;
+        size = 100;
+        sunColour = '#CFCFCF';
+        backgroundHeight = 1200;
+      }
+    }
+  sun(500,sunStart,size,sunColour);
 
 
   /*======================================================================================
@@ -193,22 +262,46 @@ function draw(){
     for(var i = 1; i <= cloudNumber; i++){
       var x = Math.floor((Math.random() * 1000) + 1),
           y = Math.floor((Math.random() * 400) + 1),
-          speed = Math.floor((Math.random() * 2) + 1);
-          cloudData[i] = {"x": x, "y": y, "speed" : speed};
+          speed = Math.floor((Math.random() * 2) + 1),
+          directionChoice = Math.floor((Math.random() * 2) + 1),
+          direction;
+          if(directionChoice === 1){
+            direction = "right";
+          }else{
+            direction = "left";
+          }
+          cloudData[i] = {"x": x, "y": y, "speed" : speed, "direction":direction};
           cloud(x,y);
           activeClouds++;
     }
   }else{
     for(var key in cloudData){
       var move_speed = cloudData[key].speed,
-          newX = cloudData[key].x + move_speed,
-          currentY = cloudData[key].y;
-          if(newX > 1350){
-            newX = -350;
+          newX,
+          currentY = cloudData[key].y,
+          currentDirection = cloudData[key].direction;
+
+          if(currentDirection === "right"){
+            newX = cloudData[key].x + move_speed;
+          }else{
+            newX = cloudData[key].x - move_speed;
+          }
+
+          if(newX > 1350 || newX < -350){
             var newY = Math.floor((Math.random() * 500) + 1),
-            newSpeed = Math.floor((Math.random() * 2) + 1);
+            newSpeed = Math.floor((Math.random() * 2) + 1),
+            newdirectionChoice = Math.floor((Math.random() * 2) + 1),
+            newDirection;
+            if(newdirectionChoice === 1){
+              newDirection = "right";
+              newX = -350;
+            }else{
+              newDirection = "left";
+              newX = 1350;
+            }
             cloudData[key].y = newY;
             cloudData[key].speed = newSpeed;
+            cloudData[key].direction = newDirection;
           }
       cloud(newX,currentY);
       cloudData[key].x = newX;
@@ -279,11 +372,11 @@ function draw(){
   /*======================================================================================
   Draw All the trees
   ======================================================================================*/
-  tree(900,400);
-  tree(750,550);
-  tree(600,340);
-  tree(980,300);
-  tree(680,445);
+  tree(900,400,highlight);
+  tree(750,550,highlight);
+  tree(600,340,highlight);
+  tree(980,300,highlight);
+  tree(680,445,highlight);
 
 
   /*======================================================================================

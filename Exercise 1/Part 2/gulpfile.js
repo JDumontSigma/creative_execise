@@ -26,8 +26,8 @@
       style: 'expanded',
       loadPath:[
         config.bowerDir + '/fontawesome/scss',
-        
-        
+
+
         config.npmDir + '/bootstrap-sass/assets/stylesheets',
       ]
       })
@@ -64,7 +64,6 @@ gulp.task('scripts', function() { 
         'app/assets/js/*.js'
     ])
         .pipe(concat('scripts.js'))
-        .pipe(uglify())
         .pipe(gulp.dest('dist/assets/js'))
         .pipe(browserSync.stream());
 });
