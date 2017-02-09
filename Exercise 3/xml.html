@@ -20,7 +20,7 @@ $(document).ready(function(){
     cache: false,
     success: function(data){
       $(data).find('item').each(function(){
-        console.log($(this).find('name'));
+        console.log($(this).find('name').text());
       });
     }
   }).fail(function(data){
