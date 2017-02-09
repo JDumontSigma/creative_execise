@@ -20,6 +20,7 @@ $(document).ready(function(){
 
       var xmlParse = $.parseXML(data);
       var xml = $(xmlParse);
+      console.log(xml);
       var items = xml.find("item");
 
       items.each(function(){
