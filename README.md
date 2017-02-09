@@ -19,7 +19,8 @@ Please click [here](https://docs.google.com/document/d/1nCTjZjxjRrjRBdyg4OhmtmTv
 Building various example of retreiving code using three methods, xml, JSON and JSONP
 
 -xml
-[XML version, still unbuilt]("")
+[XML Working](https://jdumontsigma.github.io/creative_exercise/Exercise%203/xml.html "XML working version"),
+[XML Broken Version](https://jdumontsigma.github.io/creative_exercise/Exercise%203/xml_broken.html "xml broken version")
 
 -JSON
 [Successful JSON Response](https://jdumontsigma.github.io/creative_exercise/Exercise%203/json.html "Successfull Callback")
