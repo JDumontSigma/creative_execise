@@ -8,7 +8,7 @@
 <h1>This is retrieving JSON data from Treehouse</h1>
 <h2>The box below contains information about</h2>
 <h2 class="title"></h2>
-<pre class="demo"></pre>
+<div class="demo"></div>
 <!-- Require Jquery to use the Ajax methods built in -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -20,10 +20,9 @@ $(document).ready(function(){
 
       var xmlParse = $.parseXML(data);
       var xml = $(xmlParse);
-      console.log(xml);
-      var items = xml.find('item');
-      console.log(items);
-      $(items).each(function(){
+      var items = xml.find("item");
+
+      items.each(function(){
         $('.demo').append("hello");
       });
     }
