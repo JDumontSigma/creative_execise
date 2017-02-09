@@ -1,0 +1,21 @@
+.holder{
+  background-color: #E5E5E5;
+  margin-top: 740px;
+}
+.rationale{
+  padding-bottom: 50px;
+  @extend .container;
+  h1,h2{
+    position: relative;
+    margin-bottom: 15px;
+    &:after{
+      content: "";
+      height: 7px;
+      width: 50px;
+      background-color: #006ba6;
+      left:0;
+      bottom: -12px;
+      position: absolute;
+    }
+  }
+}
