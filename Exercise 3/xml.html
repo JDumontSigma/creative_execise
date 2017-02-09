@@ -12,6 +12,7 @@
 <!-- Require Jquery to use the Ajax methods built in -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
+var string = "";
 $(document).ready(function(){
   $.ajax({
     type: "GET",
@@ -20,11 +21,18 @@ $(document).ready(function(){
     cache: false,
     success: function(data){
       $(data).find('item').each(function(){
-        console.log($(this).find('name').text());
+        string += "Fruit Name: " + $(this).find('name').text() + "<br/>";
+        string += "Fruit Colour: " + $(this).find('colour').text() + "<br/>";
+        string += "Is it expensive?: " + $(this).find('expensive').text() + "<br/>";
+        string += "Available everywhere?: " + $(this).find('supermarket').text() + "<br/>";
+        string += "======================================================================" = "<br/>";
+
       });
     }
   }).fail(function(data){
     console.log("There was a problem");
+  }).done(function(){
+    $('.demo').html(string);
   });
 });
 
