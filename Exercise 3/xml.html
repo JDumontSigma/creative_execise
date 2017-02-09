@@ -14,19 +14,14 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $.ajax({
+    type: "GET",
     url: "https://jdumontsigma.github.io/creative_exercise/Exercise%203/files/xml.xml",
-    dataType: 'xml',
+    dataType: "xml",
+    cache: false,
     success: function(data){
-
-      var xmlParse = $.parseXML(data);
-      var xml = $(xmlParse);
-      console.log(xml);
-      var items = xml.find("item");
-
-      items.each(function(){
-        $('.demo').append("hello");
+      $(data).find('item').each(function(){
+        console.log($(this).find('name'));
       });
-    }
   }).fail(function(data){
     console.log("There was a problem");
   });
