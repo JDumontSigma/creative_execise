@@ -21,4 +21,4 @@ Building various example of retreiving code using three methods, xml, JSON and J
 
 -JSON
 [Successful JSON Response](https://jdumontsigma.github.io/creative_exercise/Exercise%203/json.html "Successfull Callback")
-[Broken JSON Repsponse](https://jdumontsigma.github.io/creative_exercise/Exercise%203/json_broken.html "Broken Callback")
+[Broken JSON Response](https://jdumontsigma.github.io/creative_exercise/Exercise%203/json_broken.html "Broken Callback")
