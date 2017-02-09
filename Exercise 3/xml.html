@@ -18,9 +18,10 @@ $(document).ready(function(){
     dataType: 'xml',
     success: function(data){
       var xml = $.parseXML(data);
+      console.log(xml);
       $(xml.food().item()).each(function(){
         $('.demo').append('HEllo');
-      });  
+      });
     }
   }).fail(function(data){
     console.log("There was a problem");
