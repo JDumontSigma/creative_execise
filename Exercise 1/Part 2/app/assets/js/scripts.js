@@ -383,12 +383,20 @@ function draw(){
   Draw all the lines which i have planned!
   ======================================================================================*/
   ctx.stroke();
+
+
+  /*======================================================================================
+  Creates a loop for the animations
+  ======================================================================================*/
   var looptime = setTimeout(function(){
     draw();
-  },30);
+  },20);
+
+
 }
 
 
 $(document).ready(function(){
+  //Call the function to start drawing content
   draw();
 });
