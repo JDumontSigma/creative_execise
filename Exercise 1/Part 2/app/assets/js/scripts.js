@@ -22,6 +22,20 @@ $('#btn-save').click(function( e ){
 /*======================================================================================
 Cloud Code Here
 ======================================================================================*/
+function rain(x,y){
+  var length = y + 9;
+  ctx.beginPath();
+  ctx.lineWidth = '2';
+  ctx.strokeStyle = '#fff';
+  ctx.moveTo(x,y);
+  ctx.lineTo(x,length);
+  ctx.stroke();
+  ctx.closePath();
+}
+
+/*======================================================================================
+Cloud Code Here
+======================================================================================*/
 function cloud(startX,startY){
   var length = startX + 350;
 
@@ -212,6 +226,9 @@ function draw(){
     backgroundHeight = 700;
   }
     if(night){
+      if(night && backgroundHeight === 1000){
+        drawRain();
+      }
       highlight = blueHighlight;
       darkCol = darkBlue;
       if(sunStart > -200){
@@ -280,13 +297,11 @@ function draw(){
           newX,
           currentY = cloudData[key].y,
           currentDirection = cloudData[key].direction;
-
           if(currentDirection === "right"){
             newX = cloudData[key].x + move_speed;
           }else{
             newX = cloudData[key].x - move_speed;
           }
-
           if(newX > 1350 || newX < -350){
             var newY = Math.floor((Math.random() * 500) + 1),
             newSpeed = Math.floor((Math.random() * 2) + 1),
@@ -307,7 +322,6 @@ function draw(){
       cloudData[key].x = newX;
     }
   }
-
 
 
 
@@ -390,13 +404,56 @@ function draw(){
   ======================================================================================*/
   var looptime = setTimeout(function(){
     draw();
-  },20);
+  },10);
 
 
 }
+var rainNumber = 100,
+    rainData = {},
+    activeRain = 0;
+function drawRain(){
+
+  /*======================================================================================
+  Draw the rain
+  ======================================================================================*/
+  if(activeRain !== rainNumber){
+    for(var i = 1; i <= rainNumber; i++){
+      var x = Math.floor((Math.random() * 1000) + 1),
+          y = Math.floor((Math.random() * 700) + 1),
+          speed = Math.floor((Math.random() * 10) + 5) ;
+          rainData[i] = {"x": x, "y": y, "speed" : speed};
+          rain(x,y);
+          activeRain++;
+    }
+  }else{
+    for(var key in rainData){
+      var move_speed = rainData[key].speed,
+          newY = rainData[key].y + move_speed,
+          currentX = rainData[key].x;
+
+          if(newY > 700){
+            newY = -100;
+            var newX = Math.floor((Math.random() * 1000) + 1),
+            newSpeed = Math.floor((Math.random() * 10) + 5);
+            rainData[key].x = newX;
+            rainData[key].speed = newSpeed;
+          }
+      rain(currentX,newY);
+      rainData[key].y = newY;
+    }
+  }
+
+  ctx.stroke();
+  if(night){
+    var looptime = setTimeout(function(){
+      drawRain();
+    },10);
+  }
 
 
+}
 $(document).ready(function(){
   //Call the function to start drawing content
   draw();
+  drawRain();
 });
