@@ -1,4 +1,5 @@
-<food>
+<?xml version='1.0' ?>
+<doc>
   <item>
     <name>Banana</name>
     <colour>Yellow</colour>
@@ -35,4 +36,4 @@
     <expensive>Yes</expensive>
     <supermarket>Seasonal</supermarket>
   </item>
-</food>
+</doc>
