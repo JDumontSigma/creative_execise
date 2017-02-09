@@ -17,11 +17,12 @@ $(document).ready(function(){
     url: "https://jdumontsigma.github.io/creative_exercise/Exercise%203/files/xml.xml",
     dataType: 'xml',
     success: function(data){
-      console.log(data);
-      var xml = $.parseXML(data);
-      console.log(xml);
-      $(xml.food().item()).each(function(){
-        $('.demo').append('HEllo');
+
+      var xmlParse = $.parseXML(data);
+      var xml = $(xmlParse);
+      var items = xml.find('item');
+      $(items).each(function(){
+        $('.demo').append("hello");
       });
     }
   }).fail(function(data){
