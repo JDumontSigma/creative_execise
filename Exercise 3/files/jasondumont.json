@@ -1,0 +1,455 @@
+{
+  "name": "Jason Dumont",
+  "profile_name": "jasondumont",
+  "profile_url": "https://teamtreehouse.com/jasondumont",
+  "gravatar_url": "https://secure.gravatar.com/avatar/3496b32d01409c91d1dbb482aa67f515?s=400&d=https%3A%2F%2Fstatic.teamtreehouse.com%2Fassets%2Fcontent%2Fdefault_avatar-d5ee029fdb4c0604d314eb946dbf8e6a.png&r=pg",
+  "gravatar_hash": "6a1b0b00eb02c02f45ec3e68ee372dbf",
+  "badges": [
+    {
+      "id": 49,
+      "name": "Newbie",
+      "url": "https://teamtreehouse.com/jasondumont",
+      "icon_url": "https://achievement-images.teamtreehouse.com/Generic_Newbie.png",
+      "earned_date": "2016-04-05T13:51:37.000Z",
+      "courses": []
+    },
+    {
+      "id": 912,
+      "name": "Beginning HTML and CSS",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website/beginning-html-and-css",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_html_howtomakeawebsite_stage01.png",
+      "earned_date": "2016-04-07T19:08:34.000Z",
+      "courses": [
+        {
+          "title": "How to Make a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website",
+          "badge_count": 1
+        },
+        {
+          "title": "Beginning HTML and CSS",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website/beginning-html-and-css",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 922,
+      "name": "HTML First",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website/html-first",
+      "icon_url": "https://achievement-images.teamtreehouse.com/bagdes_html_howtobuildawebsite_stage02.png",
+      "earned_date": "2016-04-07T19:26:54.000Z",
+      "courses": [
+        {
+          "title": "How to Make a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website",
+          "badge_count": 1
+        },
+        {
+          "title": "HTML First",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website/html-first",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 992,
+      "name": "Sharing a Website",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website/sharing-a-website",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_html_howtomakeawebsite_stage09.png",
+      "earned_date": "2016-04-22T21:47:44.000Z",
+      "courses": [
+        {
+          "title": "How to Make a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website",
+          "badge_count": 1
+        },
+        {
+          "title": "Sharing a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website/sharing-a-website",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 3262,
+      "name": "Getting Started with WordPress",
+      "url": "https://teamtreehouse.com/library/getting-started-with-wordpress/getting-started-with-wordpress",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_WP_GettingStarted_Stage1.png",
+      "earned_date": "2016-05-04T19:32:34.000Z",
+      "courses": [
+        {
+          "title": "Getting Started with WordPress",
+          "url": "https://teamtreehouse.com/library/getting-started-with-wordpress",
+          "badge_count": 1
+        },
+        {
+          "title": "Getting Started with WordPress",
+          "url": "https://teamtreehouse.com/library/getting-started-with-wordpress/getting-started-with-wordpress",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 932,
+      "name": "Creating HTML Content",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website/creating-html-content",
+      "icon_url": "https://achievement-images.teamtreehouse.com/bagdes_html_howtobuildawebsite_stage03.png",
+      "earned_date": "2016-05-04T19:36:11.000Z",
+      "courses": [
+        {
+          "title": "How to Make a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website",
+          "badge_count": 1
+        },
+        {
+          "title": "Creating HTML Content",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website/creating-html-content",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 942,
+      "name": "CSS: Cascading Style Sheets",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website/css-cascading-style-sheets",
+      "icon_url": "https://achievement-images.teamtreehouse.com/bagdes_html_howtobuildawebsite_stage04.png",
+      "earned_date": "2016-05-04T19:38:44.000Z",
+      "courses": [
+        {
+          "title": "How to Make a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website",
+          "badge_count": 1
+        },
+        {
+          "title": "CSS: Cascading Style Sheets",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website/css-cascading-style-sheets",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 952,
+      "name": "Customizing Colors and Fonts",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website/customizing-colors-and-fonts",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_html_howtomakeawebsite_stage05.png",
+      "earned_date": "2016-05-04T19:44:19.000Z",
+      "courses": [
+        {
+          "title": "How to Make a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website",
+          "badge_count": 1
+        },
+        {
+          "title": "Customizing Colors and Fonts",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website/customizing-colors-and-fonts",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 5562,
+      "name": "Installing Sass and Setting up the Project",
+      "url": "https://teamtreehouse.com/library/css-to-sass/installing-sass-and-setting-up-the-project",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_css_csstosass_stage01.png",
+      "earned_date": "2016-05-25T13:03:20.000Z",
+      "courses": [
+        {
+          "title": "CSS to Sass",
+          "url": "https://teamtreehouse.com/library/css-to-sass",
+          "badge_count": 1
+        },
+        {
+          "title": "Installing Sass and Setting up the Project",
+          "url": "https://teamtreehouse.com/library/css-to-sass/installing-sass-and-setting-up-the-project",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 962,
+      "name": "Styling Web Pages and Navigation",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website/styling-web-pages-and-navigation",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_html_howtomakeawebsite_stage06.png",
+      "earned_date": "2016-07-05T08:53:02.000Z",
+      "courses": [
+        {
+          "title": "How to Make a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website",
+          "badge_count": 1
+        },
+        {
+          "title": "Styling Web Pages and Navigation",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website/styling-web-pages-and-navigation",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 972,
+      "name": "Adding Pages to a Website",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website/adding-pages-to-a-website",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_html_howtomakeawebsite_stage07.png",
+      "earned_date": "2016-07-05T09:01:23.000Z",
+      "courses": [
+        {
+          "title": "How to Make a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website",
+          "badge_count": 1
+        },
+        {
+          "title": "Adding Pages to a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website/adding-pages-to-a-website",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 982,
+      "name": "Responsive Web Design and Testing",
+      "url": "https://teamtreehouse.com/library/how-to-make-a-website/responsive-web-design-and-testing",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_html_howtomakeawebsite_stage08.png",
+      "earned_date": "2016-07-05T09:08:41.000Z",
+      "courses": [
+        {
+          "title": "How to Make a Website",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website",
+          "badge_count": 1
+        },
+        {
+          "title": "Responsive Web Design and Testing",
+          "url": "https://teamtreehouse.com/library/how-to-make-a-website/responsive-web-design-and-testing",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 8102,
+      "name": "Getting Started with Angular",
+      "url": "https://teamtreehouse.com/library/angularjs-3/getting-started-with-angular",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges-js-angularbasics-stage1.png",
+      "earned_date": "2016-08-03T08:21:48.000Z",
+      "courses": [
+        {
+          "title": "AngularJS",
+          "url": "https://teamtreehouse.com/library/angularjs-3",
+          "badge_count": 1
+        },
+        {
+          "title": "Getting Started with Angular ",
+          "url": "https://teamtreehouse.com/library/angularjs-3/getting-started-with-angular",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 8112,
+      "name": "Controllers and Scope",
+      "url": "https://teamtreehouse.com/library/angularjs-3/controllers-and-scope",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges-js-angularbasics-stage2.png",
+      "earned_date": "2016-08-03T08:54:07.000Z",
+      "courses": [
+        {
+          "title": "AngularJS",
+          "url": "https://teamtreehouse.com/library/angularjs-3",
+          "badge_count": 1
+        },
+        {
+          "title": "Controllers and Scope",
+          "url": "https://teamtreehouse.com/library/angularjs-3/controllers-and-scope",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 4432,
+      "name": "Introduction to Node.js",
+      "url": "https://teamtreehouse.com/library/nodejs-basics-2014/introduction-to-nodejs",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_JavaScript_nodeBasics_Stage1.png",
+      "earned_date": "2016-09-30T17:13:46.000Z",
+      "courses": [
+        {
+          "title": "Node.js Basics (2014)",
+          "url": "https://teamtreehouse.com/library/nodejs-basics-2014",
+          "badge_count": 1
+        },
+        {
+          "title": "Introduction to Node.js",
+          "url": "https://teamtreehouse.com/library/nodejs-basics-2014/introduction-to-nodejs",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 4442,
+      "name": "Building a Command Line Application",
+      "url": "https://teamtreehouse.com/library/nodejs-basics-2014/building-a-command-line-application",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_JavaScript_nodeBasics_Stage2.png",
+      "earned_date": "2016-10-11T12:16:40.000Z",
+      "courses": [
+        {
+          "title": "Node.js Basics (2014)",
+          "url": "https://teamtreehouse.com/library/nodejs-basics-2014",
+          "badge_count": 1
+        },
+        {
+          "title": "Building a Command Line Application",
+          "url": "https://teamtreehouse.com/library/nodejs-basics-2014/building-a-command-line-application",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 5742,
+      "name": "Creating a Simple Server in Node.js",
+      "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs/creating-a-simple-server-in-nodejs",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_JavaScript_nodesite_Stage1.png",
+      "earned_date": "2016-11-05T15:37:06.000Z",
+      "courses": [
+        {
+          "title": "Build a Simple Dynamic Site with Node.js",
+          "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs",
+          "badge_count": 1
+        },
+        {
+          "title": "Creating a Simple Server in Node.js",
+          "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs/creating-a-simple-server-in-nodejs",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 5752,
+      "name": "Handling Routes in Node.js",
+      "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs/handling-routes-in-nodejs",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_JavaScript_nodesite_Stage2.png",
+      "earned_date": "2016-11-05T16:24:11.000Z",
+      "courses": [
+        {
+          "title": "Build a Simple Dynamic Site with Node.js",
+          "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs",
+          "badge_count": 1
+        },
+        {
+          "title": "Handling Routes in Node.js",
+          "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs/handling-routes-in-nodejs",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 5762,
+      "name": "Creating a Basic Template Engine in Node.js",
+      "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs/creating-a-basic-template-engine-in-nodejs",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_JavaScript_nodesite_Stage3.png",
+      "earned_date": "2016-11-06T13:13:31.000Z",
+      "courses": [
+        {
+          "title": "Build a Simple Dynamic Site with Node.js",
+          "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs",
+          "badge_count": 1
+        },
+        {
+          "title": "Creating a Basic Template Engine in Node.js",
+          "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs/creating-a-basic-template-engine-in-nodejs",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 6862,
+      "name": "Getting Started with Express",
+      "url": "https://teamtreehouse.com/library/express-basics/getting-started-with-express",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_JavaScript_ExpressBasics_Stage1.png",
+      "earned_date": "2016-12-20T14:37:15.000Z",
+      "courses": [
+        {
+          "title": "Express Basics",
+          "url": "https://teamtreehouse.com/library/express-basics",
+          "badge_count": 1
+        },
+        {
+          "title": "Getting Started with Express",
+          "url": "https://teamtreehouse.com/library/express-basics/getting-started-with-express",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 5772,
+      "name": "HTTP Methods and Headers",
+      "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs/http-methods-and-headers",
+      "icon_url": "https://achievement-images.teamtreehouse.com/28915216692034.qKBlqUtVqw3T4I2SZ3L0_height640.png",
+      "earned_date": "2017-01-24T11:57:42.000Z",
+      "courses": [
+        {
+          "title": "Build a Simple Dynamic Site with Node.js",
+          "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs",
+          "badge_count": 1
+        },
+        {
+          "title": "HTTP Methods and Headers",
+          "url": "https://teamtreehouse.com/library/build-a-simple-dynamic-site-with-nodejs/http-methods-and-headers",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 6872,
+      "name": "Developing Express Apps Like a Boss",
+      "url": "https://teamtreehouse.com/library/express-basics/developing-express-apps-like-a-boss",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_JavaScript_ExpressBasics_Stage2.png",
+      "earned_date": "2017-01-24T12:07:16.000Z",
+      "courses": [
+        {
+          "title": "Express Basics",
+          "url": "https://teamtreehouse.com/library/express-basics",
+          "badge_count": 1
+        },
+        {
+          "title": "Developing Express Apps Like a Boss",
+          "url": "https://teamtreehouse.com/library/express-basics/developing-express-apps-like-a-boss",
+          "badge_count": 1
+        }
+      ]
+    },
+    {
+      "id": 8542,
+      "name": "Introduction to MEAN ",
+      "url": "https://teamtreehouse.com/library/building-a-mean-application/introduction-to-the-mean-stack",
+      "icon_url": "https://achievement-images.teamtreehouse.com/badges_JavaScript_MEANapp_Stage1.png",
+      "earned_date": "2017-02-05T21:44:43.000Z",
+      "courses": [
+        {
+          "title": "Building a MEAN Application ",
+          "url": "https://teamtreehouse.com/library/building-a-mean-application",
+          "badge_count": 1
+        },
+        {
+          "title": "Introduction to the MEAN Stack  ",
+          "url": "https://teamtreehouse.com/library/building-a-mean-application/introduction-to-the-mean-stack",
+          "badge_count": 1
+        }
+      ]
+    }
+  ],
+  "points": {
+    "total": 1552,
+    "HTML": 410,
+    "CSS": 198,
+    "Design": 0,
+    "JavaScript": 803,
+    "Ruby": 0,
+    "PHP": 0,
+    "WordPress": 98,
+    "iOS": 0,
+    "Android": 0,
+    "Development Tools": 12,
+    "Business": 0,
+    "Python": 0,
+    "Java": 0,
+    "Digital Literacy": 0,
+    "Game Development": 0,
+    "C#": 0,
+    "Databases": 0
+  }
+}

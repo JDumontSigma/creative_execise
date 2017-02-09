@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON &verbar; Reteival Example</title>
+</head>
+<body>
+<h1>This is retrieving JSON data from Treehouse</h1>
+<h2>The box below containts the data about jasondumont provided by Treehouse</h2>
+<pre class="demo"></pre>
+<!-- Require Jquery to use the Ajax methods built in -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    //call a get method to retrieve the json data
+    //to check it works change jasondumont to any of the following
+    //chalkers123
+    //chalkers
+    //to demonstrate a fail type anything from jasbadjsds to asdjkasdhcb
+    $.get("../files/jasondumont.json",function(response){
+      //converts the response into a format which we can print to the screen
+      //otherwise the response is left as an object and nothing is displayed
+      var response = JSON.stringify(response,undefined,2);
+      //set the response to fill up the pre tag so it can be see on screen
+      $('.demo').html(response);
+      //error handling
+      //if the response fails
+    }).fail(function(response){
+      //KEY POINT
+      //This will not prevent an error on the console
+      /////////////////////
+      //make a nice human readable message
+      var string = "There seems to be an error retrieving the data. ";
+      string+= "The message returned was ";
+      //format the response into content we can display
+      string += JSON.stringify(response,undefined,2);
+      //print the content out to the screen
+      $('.demo').html(string);
+    });
+  });
+</script>
+</body>
+</html>

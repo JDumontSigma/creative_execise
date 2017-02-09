@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSONP &verbar; Retrieval Example</title>
+</head>
+<body>
+  <h1>This is retrieving data from across domains using JSONP</h1>
+  <div id="images"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+  //request a callback for a cross domain request
+  $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+    {
+      tags: "funny",
+      tagmode: "any",
+      format: "jsonp"
+    },
+    function(data) {
+      console.log(data);
+    });
+
+  </script>
+</body>
+</html>
