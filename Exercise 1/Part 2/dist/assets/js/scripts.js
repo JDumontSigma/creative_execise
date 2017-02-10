@@ -433,6 +433,7 @@ function drawRain(){
       var x = Math.floor((Math.random() * 1000) + 1),
           y = Math.floor((Math.random() * 700) + 1),
           speed = Math.floor((Math.random() * 10) + 5) ;
+          y = y * -1;
           rainData[i] = {"x": x, "y": y, "speed" : speed};
           rain(x,y);
           activeRain++;
