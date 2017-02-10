@@ -13,7 +13,7 @@ This is the page which holds the rationale part of my assignment along with the 
 ###Animated Canvas Drawing
 This contains the same image however it now has animated components
 [Animated Canvas Work](https://jdumontsigma.github.io/creative_exercise/Exercise%201/Part%202/dist/index.html "Animated Canvas Work")
-
+-----
 ##Exercise 2
 A report about [Chart.js](http://www.chartjs.org/ "Chart.JS")
 Please click [here](https://docs.google.com/document/d/1nCTjZjxjRrjRBdyg4OhmtmTvaWavIATlLn5tGUKxTJU/edit?usp=sharing "Chart.JS report") to go to the google docs
@@ -22,11 +22,11 @@ Please click [here](https://docs.google.com/document/d/1nCTjZjxjRrjRBdyg4OhmtmTv
 [Bar chart](https://jdumontsigma.github.io/creative_exercise/Exercise%202/bar.html "Bar chart example")
 #####Line chart
 [Line chart](https://jdumontsigma.github.io/creative_exercise/Exercise%202/line.html "Line chart example")
-
+---------
 ##Exercise 3
 Building various example of retreiving code using three methods, xml, JSON and JSONP
 ####Comparison
-[XML vs JSON vs JSONP](https://docs.google.com/document/d/1ITc4DcKrwL5SU4e-EKpMMPUB5OMwJUQZqbhxfgrJecM/edit?usp=sharing ("Google Docs Report"))
+[XML vs JSON vs JSONP Report](https://docs.google.com/document/d/1ITc4DcKrwL5SU4e-EKpMMPUB5OMwJUQZqbhxfgrJecM/edit?usp=sharing ("Google Docs Report"))
 
 -xml
 [XML Working](https://jdumontsigma.github.io/creative_exercise/Exercise%203/xml.html "XML working version"),
@@ -38,6 +38,6 @@ Building various example of retreiving code using three methods, xml, JSON and J
 
 -JSONP
 [JSONP example](https://jdumontsigma.github.io/creative_exercise/Exercise%203/jsonp.html "Broken Callback")
-
+-----------------
 ##Exercise 4
 Presentation about our main assessment, this will be uploaded once completed
