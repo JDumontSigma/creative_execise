@@ -3,6 +3,9 @@
 
 
 ###Exercise 1
+KEY INFORMATION: The scripts which I have used for both parts of this assesment and where it is easiest to read/see my comments is in the directory
+app/assets/js/scripts.js
+
 #### Static Canvas Drawing
 This is the page which holds the rationale part of my assignment along with the static canvas image which I created.
 [Static Canvas Work](https://jdumontsigma.github.io/creative_exercise/Exercise%201/Part%201/dist/index.html "Static Canvas Work")
