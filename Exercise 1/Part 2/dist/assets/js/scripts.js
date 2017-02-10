@@ -197,7 +197,7 @@ function background(height, dark,light){
 /*======================================================================================
 Draw function
 ======================================================================================*/
-var cloudNumber = 4,
+var cloudNumber = 20,
     cloudData = {},
     activeClouds = 0;
 

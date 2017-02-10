@@ -11,10 +11,6 @@ This is the page which holds the rationale part of my assignment along with the 
 This contains the same image however it now has animated components
 [Animated Canvas Work](https://jdumontsigma.github.io/creative_exercise/Exercise%201/Part%202/dist/index.html "Animated Canvas Work")
 
-###Animated Canvas Drawing
-This is the page which holds the developed version of my static canvas, now including animation
-[Undergoing work](https://jdumontsigma.github.io/creative_exercise/Exercise%201/dist/animated.html "Static Canvas Work")
-
 ###Exercise 2
 A report about [Chart.js](http://www.chartjs.org/ "Chart.JS")
 Please click [here](https://docs.google.com/document/d/1nCTjZjxjRrjRBdyg4OhmtmTvaWavIATlLn5tGUKxTJU/edit?usp=sharing "Chart.JS report") to go to the google docs
