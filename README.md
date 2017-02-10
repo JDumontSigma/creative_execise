@@ -18,6 +18,11 @@ This contains the same image however it now has animated components
 A report about [Chart.js](http://www.chartjs.org/ "Chart.JS")
 Please click [here](https://docs.google.com/document/d/1nCTjZjxjRrjRBdyg4OhmtmTvaWavIATlLn5tGUKxTJU/edit?usp=sharing "Chart.JS report") to go to the google docs
 
+#####Bar chart
+[Bar chart](https://jdumontsigma.github.io/creative_exercise/Exercise%202/bar.html "Bar chart example")
+#####Line chart
+[Line chart](https://jdumontsigma.github.io/creative_exercise/Exercise%202/line.html "Line chart example")
+
 ###Exercise 3
 Building various example of retreiving code using three methods, xml, JSON and JSONP
 
