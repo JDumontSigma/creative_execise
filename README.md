@@ -10,7 +10,7 @@ app/assets/js/scripts.js
 This is the page which holds the rationale part of my assignment along with the static canvas image which I created.
 [Static Canvas Work](https://jdumontsigma.github.io/creative_exercise/Exercise%201/Part%201/dist/index.html "Static Canvas Work")
 
-###Animated Canvas Drawing
+### Animated Canvas Drawing
 This contains the same image however it now has animated components
 [Animated Canvas Work](https://jdumontsigma.github.io/creative_exercise/Exercise%201/Part%202/dist/index.html "Animated Canvas Work")
 
