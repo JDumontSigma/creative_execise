@@ -12,28 +12,39 @@
 <!-- Require Jquery to use the Ajax methods built in -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type="text/javascript">
+//set an empty string to loop through
 var string = "";
+//once the website has loaded run this function
 $(document).ready(function(){
+  //calls an ajax request
   $.ajax({
+    //set the type to GET
     type: "GET",
+    //determine the url
+    //on this server
     url: "https://jdumontsigma.github.io/creative_exercise/Exercise%203/fes/xml.xml",
+    //set the data type to xml
     dataType: "xml",
-    cache: false,
     //if the response is successful then run this function
     success: function(data){
+      //as it is html strucutre content find each item tage and loop through
       $(data).find('item').each(function(){
+        //must find each tag according to the tag name and add the text to the string
         string += "Fruit Name: " + $(this).find('name').text() + "<br/>";
         string += "Fruit Colour: " + $(this).find('colour').text() + "<br/>";
         string += "Is it expensive?: " + $(this).find('expensive').text() + "<br/>";
         string += "Available everywhere?: " + $(this).find('supermarket').text() + "<br/>";
+        //add a closing line to clearly show new records
         string += "======================================================================" + "<br/>";
 
       });
     }
+    //if there is an issue then do not work
   }).fail(function(data){
     string = "There was an error retrieving the data";
     //Once the success function has run though completely execute this
   }).done(function(){
+    //once the ajax method has finished then print the string out to the screen
     //put the generated string into the demo div to show on screen
     $('.demo').html(string);
   });

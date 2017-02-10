@@ -9,31 +9,41 @@
   <div class="demo"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript">
-  // Tiny object for getting counts
+  // creates an object in a variable with functions
   var socialGetter = (function() {
-  	/* just a utility to do the script injection */
+  	//function to create a script tag and insert it into the page
   	function injectScript(url) {
+      //set the elemtn to a script
   		var script = document.createElement('script');
+      //set its properties to async to stop block
   		script.async = true;
+      //the src of the script to the passed in paremeter
   		script.src = url;
+      //place the script at the botom of the page
   		document.body.appendChild(script);
   	}
 
+    //returns the object names to reference
   	return {
+      //provides an object functions with two parameters
+      //the url to try and reach and the callbackName/function to run once it is back
   		getFacebookCount: function(url, callbackName) {
+        //runs the inject script function dynamically generating the custom url including callback
   			injectScript('https://graph.facebook.com/?id=' + url + '&callback=' + callbackName);
   		}
   	};
   })();
 
 
-
+  //ponce results have been returned then this function is run
   function facebookCallback(result) {
+    //place an answer into the demo div to show something hasa returned
     $('.demo').append(result.share.share_count);
-  	 console.log('The count is: ', result.share.share_count);
+    //log the full object so that we can see what data was returend
+  	 console.log(result.share);
   }
 
-  // Usage
+  // Called the object function passing in the appropriate links and function callback
   socialGetter.getFacebookCount('https://davidwalsh.name/twitter-facebook-jsonp', 'facebookCallback');
 
   </script>

@@ -30,7 +30,7 @@ Building various example of retreiving code using three methods, xml, JSON and J
 [Broken JSON Response](https://jdumontsigma.github.io/creative_exercise/Exercise%203/json_broken.html "Broken Callback")
 
 -JSONP
-[JSONP exampel](https://jdumontsigma.github.io/creative_exercise/Exercise%203/jsonp.html "Broken Callback")
+[JSONP example](https://jdumontsigma.github.io/creative_exercise/Exercise%203/jsonp.html "Broken Callback")
 
 ###Exercise 4
 Presentation about our main assessment, this will be uploaded once completed
