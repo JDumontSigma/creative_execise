@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Examples of Chart.js</title>
+  <!-- Call in the chart js library using cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+</head>
+<body>
+<!-- Create a canvas object -->
+<canvas id="line" width="500" height="500" style="max-width:500px"></canvas>
+
+<script type="text/javascript">
+//set a variable to store all the data
+var data = {
+    //set up labels for the x axis
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {  //create labels
+            label: "My First dataset",
+            //set the background colour
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            //set the border colours
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            //set the border width
+            borderWidth: 1,
+            //set the height of each bar
+            data: [65, 59, 80, 81, 56, 55, 40],
+        }
+    ]
+};
+//get the canvas content
+    var ctx = document.getElementById("line").getContext("2d");
+    //create a new instance of the chart and pass in the canvas elements
+    new Chart(ctx, {
+      //determine the chart type, in the case base
+    type: "bar",
+    //pass in the data created previously in the vairbale
+    data: data,
+    //add in some extra options around the scales
+    options: {
+        scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        },
+        
+    }
+});
+</script>
+</body>
+</html>

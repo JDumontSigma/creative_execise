@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Examples of Chart.js</title>
+  <!-- Call in the chart js library using cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+</head>
+<body>
+
+<canvas id="line" width="500" height="500" style="max-width:500px"></canvas>
+
+
+
+
+
+
+
+<script type="text/javascript">
+   //store the canvas information into a variable
+    var ctx = document.getElementById("line").getContext("2d");
+    //start a new instant of chat
+    //pass in the canvas data and set the options
+    var myChart = new Chart(ctx, {
+      //set chart type, in this can line
+       type: 'line',
+       //padd in the data to display
+       data: {
+           //labels for each bar
+           labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+           datasets: [{
+             //the colour and data for each data set
+             //this much match the amount of labels
+               label: '# of Votes',
+               //how high up the bar it goes
+               data: [12, 19, 3, 5, 2, 3],
+               //set the background colours
+               backgroundColor: [
+                   'rgba(255, 99, 132, 0.2)',
+                   'rgba(54, 162, 235, 0.2)',
+                   'rgba(255, 206, 86, 0.2)',
+                   'rgba(75, 192, 192, 0.2)',
+                   'rgba(153, 102, 255, 0.2)',
+                   'rgba(255, 159, 64, 0.2)'
+               ],
+               //set the border colours
+               borderColor: [
+                   'rgba(255,99,132,1)',
+                   'rgba(54, 162, 235, 1)',
+                   'rgba(255, 206, 86, 1)',
+                   'rgba(75, 192, 192, 1)',
+                   'rgba(153, 102, 255, 1)',
+                   'rgba(255, 159, 64, 1)'
+               ],
+               //set the border width
+               borderWidth: 1
+           }]
+       },
+       //set some other options//in the case make sure that y starts at 0
+       options: {
+           scales: {
+               yAxes: [{
+                   ticks: {
+                       beginAtZero:true
+                   }
+               }]
+           }
+       }
+   });
+</script>
+</body>
+</html>
