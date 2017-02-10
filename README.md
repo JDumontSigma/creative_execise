@@ -25,7 +25,8 @@ Please click [here](https://docs.google.com/document/d/1nCTjZjxjRrjRBdyg4OhmtmTv
 
 ##Exercise 3
 Building various example of retreiving code using three methods, xml, JSON and JSONP
-
+####Comparison
+[XML vs JSON vs JSONP](https://docs.google.com/document/d/1ITc4DcKrwL5SU4e-EKpMMPUB5OMwJUQZqbhxfgrJecM/edit?usp=sharing ("Google Docs Report"))
 -xml
 [XML Working](https://jdumontsigma.github.io/creative_exercise/Exercise%203/xml.html "XML working version"),
 [XML Broken Version](https://jdumontsigma.github.io/creative_exercise/Exercise%203/xml_broken.html "xml broken version")
