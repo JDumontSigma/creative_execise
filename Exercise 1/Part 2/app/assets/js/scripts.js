@@ -181,132 +181,260 @@ function background(height, dark,light){
   ctx.fillRect(0, 0, 1000, 700);
 }
 
+/*======================================================================================
+Draw the rain
+======================================================================================*/
+//variables to be used with the rain data
+//change 100 to either increase of decrease amount of rain
+var rainNumber = 100,
+    rainData = {},
+    activeRain = 0;
+
+function drawRain(){
+//if the rain has not be drawn, the create the rain elements
+  if(activeRain !== rainNumber){
+    //loop through until there are the same amount of elements as rainnumber
+    for(var i = 1; i <= rainNumber; i++){
+      //generate random variable for x position, y position and the speed of each drop
+      var x = Math.floor((Math.random() * 1000) + 1),
+          y = Math.floor((Math.random() * 700) + 1),
+          speed = Math.floor((Math.random() * 10) + 5) ;
+          //set the y postion to negative to prevent flickering in the render
+          y = y * -1;
+          //set the generated data into the rainData object using i as a key
+          rainData[i] = {"x": x, "y": y, "speed" : speed};
+          //run the functions using generated data
+          rain(x,y);
+          //increase the active rain by 1
+          activeRain++;
+    }
+    //if there has been rain elements generated
+  }else{
+    //loop through all the objects in rainData
+    //using the i keys we set previously
+    for(var key in rainData){
+      //retrieve the speed of the rain
+      var move_speed = rainData[key].speed,
+          //increase the rains position by its speed
+          newY = rainData[key].y + move_speed,
+          //get the x value
+          currentX = rainData[key].x;
+          //if the rain has rached the bottom of the screen
+          //perform a reset
+          if(newY > 700){
+            //place it aboe the canvas again
+            newY = -100;
+            //generate new speed and x position
+            var newX = Math.floor((Math.random() * 1000) + 1),
+            newSpeed = Math.floor((Math.random() * 10) + 5);
+            //set this information into the variable
+            rainData[key].x = newX;
+            rainData[key].speed = newSpeed;
+          }
+      //run the rain generation
+      rain(currentX,newY);
+      //store the y value depending on the outcome of the if statment
+      rainData[key].y = newY;
+    }
+  }
+  //Draw all the elements on the screen
+  ctx.stroke();
+  //check to see if it is nightime
+  //if so loop over the function again
+  if(night){
+    var looptime = setTimeout(function(){
+      drawRain();
+    },10);
+  }
+}
 
 /*======================================================================================
-Draw function
+
+
+Variables to be used throughout the drawing
+these are outside the draw function so they are not set each time it is run
+That would be heavy on procession when it come to drawing rain/clouds
+
+
 ======================================================================================*/
-var cloudNumber = 20,
+//Variables for the clouds
+var cloudNumber = 5,
     cloudData = {},
     activeClouds = 0;
 
+//variables about time and the sun
 var sunStart = 700,
     night = false,
     size = 350,
     sunColour = '#FDB813';
 
-var red = '#cc0e0e',
-    orange = '#ef9228',
-    blue = '#003087',
-    darkBlue = '#041c2c',
-    shade = true;
+//sky colours
+var orange = '#ef9228',
+    darkBlue = '#041c2c';
 
+//gradient variables
 var backgroundHeight = 500,
     darkCol = orange,
     lightCol = darkBlue;
 
+//highlight for the trees
 var blueHighlight = 'rgba(0,48,135,0.35)',
     orangeHighlight = 'rgba(255,93,0,0.35)' ,
     highlight = orangeHighlight;
 
 
+/*======================================================================================
+Draw function
+======================================================================================*/
+//This is the function which will clear the canvas and redraw the content each 10ms
 function draw(){
 
-  //clear the entire canvase
+  //clear the entire canvas
   ctx.save();
   ctx.clearRect(0,0,1000,700);
 
-
+  //this is first as it i the piece which is further back
   background(backgroundHeight,darkCol,lightCol);
 
 
   /*======================================================================================
   Sun Is called first so it stays at the back
   ======================================================================================*/
+  //if the gradient has reached the top
   if(background < 0){
-    backgroundHeight = 700;
+    //set the gradient to the max lenght
+    backgroundHeight = 1200;
   }
+  //determine whether the sun has risen above everything
     if(night){
+      //to not start the rain straight away make sure the background has reached a certain Point
       if(night && backgroundHeight === 1000){
+        //start the rain
         drawRain();
       }
+      //set the highlight on the trees to blue
       highlight = blueHighlight;
+      //set the grdients to a blue
       darkCol = darkBlue;
+      //if the sun/moon is further down the canvas
       if(sunStart > -200){
+        //make the sun/moon move up the screen
         sunStart--;
+        //if the backgrund height on the gradient is great than 0 decrease it so it gets bigger
         if(backgroundHeight >= 0){
+          //minus 4 from its current height
           backgroundHeight = backgroundHeight - 4;
         }
+        //if it is less that 0 then replace the two colours
+        //this emulates sunrise
         if(backgroundHeight < 0){
           lightCol = darkBlue;
           darkCol = orange;
         }
       }
+      //if the moon/sun has reached beyond the top of the canvas
       if(sunStart <= -200){
+        //set the colour to yellow so it is a sun
         sunColour = '#FDB813';
+        //increase the size back up to 350
         size = 350;
+        //move it back down the canvase to 800 on the y axis
         sunStart = 800;
+        //turn night time off
         night = false;
+        //reset the background height of the gradient
         backgroundHeight = 1200;
       }
     }
+    //if it is daytime!
     if(!night){
+      //set the tree highlights to orange
       highlight = orangeHighlight;
+      //the lower colour on the gradient to orange
       darkCol = orange;
+      //move the sun up the screen
       sunStart = sunStart - 2;
+      //move the orange background over the screen to simulate sunrise
       backgroundHeight = backgroundHeight - 4;
+      //if the sun is bigger than 50 wide
       if(size > 50){
+        //reduce the size slowly
         size = size - 0.85;
       }
+      //if the background height has gone beyond the screen
       if(backgroundHeight < 0){
+        //flip the colour
         lightCol = orange;
         darkCol = darkBlue;
       }
+      //if the sun has gone off the screen
       if(sunStart < -200){
+        //turn it to night time
         night = true;
+        //reset the moon position
         sunStart = 600;
+        //reduce the size back to 100
         size = 100;
+        //change the colour
         sunColour = '#CFCFCF';
+        //reset the gradient height
         backgroundHeight = 1200;
       }
     }
+//then draw the sun with the variables appropriate
   sun(500,sunStart,size,sunColour);
 
 
-  /*======================================================================================
-  Draw the clouds
-  ======================================================================================*/
+/*======================================================================================
+Draw the clouds
+======================================================================================*/
+//if there are no clouds generated then draw the clouds
   if(activeClouds !== cloudNumber){
+    //loop through this as many time as set
     for(var i = 1; i <= cloudNumber; i++){
+      //set random number for the x postiioon and y positiom, speed and a number between 1 and 2 for the direction
+      //also variabls to sort out other numbers
       var x = Math.floor((Math.random() * 1000) + 1),
           y = Math.floor((Math.random() * 400) + 1),
           speed = Math.floor((Math.random() * 2) + 1),
           directionChoice = Math.floor((Math.random() * 2) + 1),
           direction;
+          //set a string rather than number to direction variables
           if(directionChoice === 1){
             direction = "right";
           }else{
             direction = "left";
           }
+          //store all the data into the cloud data object
           cloudData[i] = {"x": x, "y": y, "speed" : speed, "direction":direction};
+          //create a cloud using the generated variables
           cloud(x,y);
+          //increase the cliud count by 1
           activeClouds++;
     }
+    //if there are clouds generated
   }else{
+    //loop through all the clouds in the cloud object
     for(var key in cloudData){
+      //gater the varirables and store them locally
       var move_speed = cloudData[key].speed,
           newX,
           currentY = cloudData[key].y,
           currentDirection = cloudData[key].direction;
+          //depending on the direction set previously add or subtract the speed
           if(currentDirection === "right"){
             newX = cloudData[key].x + move_speed;
           }else{
             newX = cloudData[key].x - move_speed;
           }
+          //check to see if the cloud has gone off the screen either side
           if(newX > 1350 || newX < -350){
+            //if so generate a new set of information
             var newY = Math.floor((Math.random() * 500) + 1),
             newSpeed = Math.floor((Math.random() * 2) + 1),
             newdirectionChoice = Math.floor((Math.random() * 2) + 1),
             newDirection;
+            //depending on the number place the cloud on the opposite end of the canvase
             if(newdirectionChoice === 1){
               newDirection = "right";
               newX = -350;
@@ -314,17 +442,26 @@ function draw(){
               newDirection = "left";
               newX = 1350;
             }
+            //store the new cloud data
             cloudData[key].y = newY;
             cloudData[key].speed = newSpeed;
             cloudData[key].direction = newDirection;
           }
+          //draw the clouds
       cloud(newX,currentY);
+      //store the new x co ord depending on if statement
       cloudData[key].x = newX;
     }
   }
 
 
+  /*======================================================================================
 
+
+  This code is all the same as in Part 1
+
+
+  ======================================================================================*/
 
 
   /*======================================================================================
@@ -402,59 +539,17 @@ function draw(){
   /*======================================================================================
   Creates a loop for the animations
   ======================================================================================*/
+  //Loop over this function every 10ms
   var looptime = setTimeout(function(){
     draw();
   },10);
 
 
 }
-var rainNumber = 100,
-    rainData = {},
-    activeRain = 0;
-function drawRain(){
 
-  /*======================================================================================
-  Draw the rain
-  ======================================================================================*/
-  if(activeRain !== rainNumber){
-    for(var i = 1; i <= rainNumber; i++){
-      var x = Math.floor((Math.random() * 1000) + 1),
-          y = Math.floor((Math.random() * 700) + 1),
-          speed = Math.floor((Math.random() * 10) + 5) ;
-          y = y * -1;
-          rainData[i] = {"x": x, "y": y, "speed" : speed};
-          rain(x,y);
-          activeRain++;
-    }
-  }else{
-    for(var key in rainData){
-      var move_speed = rainData[key].speed,
-          newY = rainData[key].y + move_speed,
-          currentX = rainData[key].x;
-
-          if(newY > 700){
-            newY = -100;
-            var newX = Math.floor((Math.random() * 1000) + 1),
-            newSpeed = Math.floor((Math.random() * 10) + 5);
-            rainData[key].x = newX;
-            rainData[key].speed = newSpeed;
-          }
-      rain(currentX,newY);
-      rainData[key].y = newY;
-    }
-  }
-
-  ctx.stroke();
-  if(night){
-    var looptime = setTimeout(function(){
-      drawRain();
-    },10);
-  }
-
-
-}
+//once the webpage has loaded fully then start the two function
 $(document).ready(function(){
-  //Call the function to start drawing content
+  //start the two functions
   draw();
   drawRain();
 });
