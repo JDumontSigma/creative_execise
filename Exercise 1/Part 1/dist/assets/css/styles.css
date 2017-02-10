@@ -10082,6 +10082,9 @@ p {
   font-weight: bold;
   text-indent: 0;
 }
+.col-sm-6 ul li p i {
+  font-weight: normal;
+}
 .col-sm-6 ul li a {
   display: inline-block;
   width: 100%;
