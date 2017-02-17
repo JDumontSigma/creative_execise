@@ -1,0 +1,8 @@
+To read the Javascript I have written to make these elements work I recommend viewing them from the path
+if you open up the script.js file in the dist folder your editor may break as it is pulling in the minified JQuery and Bootstrap scripts
+
+app/assets/js/scripts.js
+
+To view the final product look at
+
+dist/index.html
