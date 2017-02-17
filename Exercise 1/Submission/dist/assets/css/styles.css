@@ -10053,6 +10053,7 @@ body {
   font-size: 1.4rem;
   background-color: #ccc;
   height: 100%;
+  text-align: center;
 }
 
 div {
@@ -10143,15 +10144,17 @@ a.skip:active, a.skip:focus {
 /* =========================================================================== */
 /* Components */
 /* =========================================================================== */
-#canvasStatic {
+#canvas {
   position: relative;
-  margin-top: 900px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: inline-block;
 }
 
 #canvasAnimated {
   margin: 0 auto;
   display: inline-block;
-  position: absolute;
+  position: relative;
   top: 20px;
   left: 0;
   right: 0;
@@ -10160,7 +10163,8 @@ a.skip:active, a.skip:focus {
 
 .holder {
   background-color: #E5E5E5;
-  margin-top: 740px;
+  margin-top: 75px;
+  text-align: left;
 }
 
 .rationale {
