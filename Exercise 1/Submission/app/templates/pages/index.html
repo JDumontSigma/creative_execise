@@ -1,0 +1,82 @@
+{% extends '../base.html' %}
+
+{% block content %}
+<canvas id="canvas" width="1000" height="700"></canvas>
+
+	<canvas id="canvasAnimated" width="1000" height="700"></canvas>
+	<section class="holder">
+		<section class="rationale">
+			<h1>Rationale</h1>
+			<small>By Jason Dumont</small>
+			<div class="col-sm-12">
+				<h2>What did I aim to make?</h2>
+				<p>I chose to make a sunset screnary, with the idea and concept of depth shown through the changing of shades.</p>
+				<p>The idea developed and extra elements as I was creating the piece</p>
+				<a id="btn-save">Click to save the image</a>
+			</div>
+			<div class="col-sm-12">
+				<h2>Part 2</h2>
+				<p>To see the animated phase of this project click here</p>
+				<a href="https://jdumontsigma.github.io/creative_exercise/Exercise%201/Part%201/dist/index.html">Click to view part 1</a>
+			</div>
+			<div class="col-sm-6">
+				<h2>Why did I choose this</h2>
+				<p>I chose this idea due to the range of elements that it is built up of, allowing me to utilise the various features that canvas has to offer, ranging from drawing straight lines to bezier curves.</p>
+				<p>Another beneficial reason to develop this scenary is the duplication of objects, allowing me to further develop the product with the use of functions.</p>
+				<p>I chose to use sunset as the time period for this drawing as I was then able to try out the gradient function, to provide a scenic back drop.</p>
+				<p>Finally, as the shapes were complex and built up of a range of colours it allowed me to understand how elements are built ontop of one another whilst changing the colour and stroke of each shape. Plus, with the scenary setup I have chosen it opens itself to being used for the animation drawing.</p>
+			</div>
+			<div class="col-sm-6">
+				<h2>References</h2>
+				<ul>
+					<li>
+						<p>Animation</p>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">MDN &verbar; Basic Animations</a>
+						<p><i>Mozilla Developer Network. (2017). Basic animations. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations [Accessed 10 Feb. 2017].</i></p>
+					</li>
+					<li>
+						<p>Drawing Lines</p>
+						<a href="http://www.w3schools.com/tags/canvas_lineto.asp">W3 Schools &verbar; HTML canvas lineTo()</a>
+						<p><i>W3schools.com. (2017). HTML canvas lineTo() Method. [online] Available at: http://www.w3schools.com/tags/canvas_lineto.asp [Accessed 10 Feb. 2017].</i></p>
+					</li>
+					<li>
+						<p>Drawing Bezier Curves</p>
+						<a href="http://www.w3schools.com/tags/canvas_beziercurveto.asp">W3 Schools &verbar; HTML canvas bezierCurveTo()</a>
+						<p><i>W3schools.com. (2017). HTML canvas bezierCurveTo() Method. [online] Available at: http://www.w3schools.com/tags/canvas_beziercurveto.asp [Accessed 10 Feb. 2017].</i></p>
+					</li>
+					<li>
+						<p>Drawing Quadratic Curves</p>
+						<a href="http://www.w3schools.com/tags/canvas_quadraticcurveto.asp">W3 Schools &verbar; HTML canvas quadraticCurveTo()</a>
+						<p><i>W3schools.com. (2017). HTML canvas quadraticCurveTo() Method. [online] Available at: http://www.w3schools.com/tags/canvas_quadraticcurveto.asp [Accessed 10 Feb. 2017].</i></p>
+					</li>
+					<li>
+						<p>Drawing Circles</p>
+						<a href="http://www.w3schools.com/tags/canvas_arc.asp">W3 Schools &verbar; HTML canvas arc()</a>
+						<p><i>W3schools.com. (2017). HTML canvas arc() Method. [online] Available at: http://www.w3schools.com/tags/canvas_arc.asp [Accessed 10 Feb. 2017].</i></p>
+					</li>
+					<li>
+						<p>Drawing Rectangles</p>
+						<a href="http://www.w3schools.com/tags/canvas_fillrect.asp">W3 Schools &verbar; HTML canvas fillRect()</a>
+						<p><i>W3schools.com. (2017). HTML canvas fillRect() Method. [online] Available at: http://www.w3schools.com/tags/canvas_fillrect.asp [Accessed 10 Feb. 2017].</i></p>
+					</li>
+					<li>
+						<p>Filling in shapes</p>
+						<a href="http://www.w3schools.com/tags/canvas_fill.asp">W3 Schools &verbar; HTML canvas fill()</a>
+						<p><i>W3schools.com. (2017). HTML canvas fill() Method. [online] Available at: http://www.w3schools.com/tags/canvas_fill.asp [Accessed 10 Feb. 2017].</i></p>
+					</li>
+					<li>
+						<p>Changing the stroke</p>
+						<a href="http://www.w3schools.com/tags/canvas_stroke.asp">W3 Schools &verbar; HTML canvas stroke()</a>
+						<p><i>W3schools.com. (2017). HTML canvas stroke() Method. [online] Available at: http://www.w3schools.com/tags/canvas_stroke.asp [Accessed 10 Feb. 2017].</i></p>
+					</li>
+					<li>
+						<p>Creating a gradient</p>
+						<a href="http://www.w3schools.com/tags/canvas_createlineargradient.asp">W3 Schools &verbar; HTML canvas createLinearGradient()</a>
+						<p><i>W3schools.com. (2017). HTML canvas createLinearGradient() Method. [online] Available at: http://www.w3schools.com/tags/canvas_createlineargradient.asp [Accessed 10 Feb. 2017].</i></p>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</section>
+
+{% endblock %}
